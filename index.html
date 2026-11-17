@@ -13,6 +13,15 @@ body{margin:0;background:#FFFFFF}
 a{color:#111111}a:hover{color:#555555}
 html{scroll-behavior:smooth}
 p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
+@media (max-width:760px){
+.site-bar{justify-content:center !important}
+.site-kicker{flex-basis:100% !important;text-align:center !important}
+.site-logo{margin-inline:auto !important}
+.site-cta{flex-basis:100% !important;justify-content:center !important}
+}
+@media (max-width:860px){
+.story-copy{padding-right:24px !important;padding-left:24px !important}
+}
 </style>
 </head>
 <body>
@@ -21,13 +30,13 @@ p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
 <div style="background: #E8E8E8; color: #111111; text-align: center; font-size: 12px; letter-spacing: 0.16em; padding: 8px 16px; font-weight: 500">講習のお申し込み受付中　｜　美容師免許をお持ちの方が対象です</div>
 
 <header style="background: #111111; color: #FFFFFF">
-<div style="max-width: 1240px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<p style="margin: 0; flex: 1 1 200px; font-size: 13px; letter-spacing: 0.1em; color: #CFCFCF">EYELASH STYLING ACADEMY</p>
-<a href="#top" style="flex: 0 0 auto; text-decoration: none; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; line-height: 1">
+<div class="site-bar" style="max-width: 1240px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<p class="site-kicker" style="margin: 0; flex: 1 1 200px; font-size: 13px; letter-spacing: 0.1em; color: #CFCFCF">EYELASH STYLING ACADEMY</p>
+<a class="site-logo" href="#top" style="flex: 0 0 auto; text-decoration: none; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; line-height: 1">
 <span style="font-family: 'Bebas Neue', sans-serif; font-size: 44px; letter-spacing: 0.12em">NEW YORK LASH</span>
 <span style="font-size: 11px; letter-spacing: 0.4em; color: #CFCFCF; padding-top: 6px">ニューヨークラッシュ</span>
 </a>
-<div style="flex: 1 1 200px; display: flex; justify-content: flex-end">
+<div class="site-cta" style="flex: 1 1 200px; display: flex; justify-content: flex-end">
 <a href="#apply" style="border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; padding: 11px 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em">講習を申し込む</a>
 </div>
 </div>
@@ -94,7 +103,7 @@ p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
 
 <section id="story" style="background: #111111; color: #FFFFFF">
 <div style="display: flex; flex-wrap: wrap; align-items: stretch">
-<div style="flex: 1 1 460px; min-width: 0; box-sizing: border-box; padding: 112px 64px 112px max(24px, calc(50vw - 596px)); display: flex; flex-direction: column; justify-content: center; gap: 22px">
+<div class="story-copy" style="flex: 1 1 460px; min-width: 0; box-sizing: border-box; padding: 112px 64px 112px max(24px, calc(50vw - 596px)); display: flex; flex-direction: column; justify-content: center; gap: 22px">
 <h2 style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(48px, 6vw, 76px); line-height: 1; letter-spacing: 0.04em">OUR STORY</h2>
 <div style="width: 56px; height: 4px; background: #FFFFFF"></div>
 <p style="margin: 0; font-size: clamp(20px, 2.4vw, 26px); font-weight: 900; line-height: 1.6; padding-top: 8px">名前の由来は、ニューヨークで受けた感動。</p>
