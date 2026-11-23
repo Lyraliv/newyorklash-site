@@ -22,12 +22,14 @@ p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
 @media (max-width:860px){
 .story-copy{padding-right:24px !important;padding-left:24px !important}
 }
+.cs-modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(17,17,17,.72);align-items:center;justify-content:center;padding:24px}
+.cs-modal:target,.cs-modal.is-open{display:flex}
 </style>
 </head>
 <body>
 <div style="width: 100%; min-height: 100vh; background: #FFFFFF; color: #111111; font-family: 'Noto Sans JP', sans-serif; font-size: 16px; line-height: 1.9; letter-spacing: 0.02em">
 
-<div style="background: #E8E8E8; color: #111111; text-align: center; font-size: 12px; letter-spacing: 0.16em; padding: 8px 16px; font-weight: 500">講習のお申し込み受付中　｜　美容師免許をお持ちの方が対象です</div>
+<div style="background: #E8E8E8; color: #111111; text-align: center; font-size: 12px; letter-spacing: 0.16em; padding: 8px 16px; font-weight: 500">講習のお申し込みは2027年1月スタート予定　｜　美容師免許をお持ちの方が対象です</div>
 
 <header style="background: #111111; color: #FFFFFF">
 <div class="site-bar" style="max-width: 1240px; margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
@@ -37,7 +39,7 @@ p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
 <span style="font-size: 11px; letter-spacing: 0.4em; color: #CFCFCF; padding-top: 6px">ニューヨークラッシュ</span>
 </a>
 <div class="site-cta" style="flex: 1 1 200px; display: flex; justify-content: flex-end">
-<a href="#apply" style="border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; padding: 11px 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em">講習を申し込む</a>
+<a href="#coming-soon" class="js-coming-soon" style="border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; padding: 11px 22px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em">講習を申し込む</a>
 </div>
 </div>
 </header>
@@ -62,7 +64,7 @@ p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
 <p style="margin: 0; font-size: clamp(28px, 3.4vw, 42px); font-weight: 900; line-height: 1.45; letter-spacing: 0.04em">お客様に寄り添う<br>スタイリング。</p>
 <p style="margin: 0; font-size: 16px; color: #E2E2E2">お客様にカールやデザイン、本数などを決めていただく「受身」のアイリストではなく、お客様の「なりたい」を叶えるラッシュアーティストへ。<br>お客様に聞くのは「なりたい目元」だけ。ラッシュのレシピはラッシュアーティストが調合し、お客様の目元を作ります。</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
-<a href="#apply" style="background: #FFFFFF; color: #111111; text-decoration: none; padding: 16px 34px; font-weight: 700; letter-spacing: 0.12em">講習を申し込む</a>
+<a href="#coming-soon" class="js-coming-soon" style="background: #FFFFFF; color: #111111; text-decoration: none; padding: 16px 34px; font-weight: 700; letter-spacing: 0.12em">講習を申し込む</a>
 <a href="#about" style="border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; padding: 15px 34px; font-weight: 700; letter-spacing: 0.12em">くわしく見る</a>
 </div>
 </div>
@@ -162,7 +164,7 @@ p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
 <p style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 60px; line-height: 1">¥65,000</p>
 <p style="margin: 0; font-size: 14px; color: #555555">（税込）</p>
 <p style="margin: 0; font-size: 14px; color: #333333; padding-top: 6px; flex-grow: 1"><strong>1日目のみ</strong><br>スタイリングの基礎・理論・分析力と、<br>ナチュラルスタイルの装着練習</p>
-<a href="#apply" style="margin-top: 12px; background: #111111; color: #FFFFFF; text-decoration: none; padding: 15px 36px; font-weight: 700; letter-spacing: 0.12em">申し込む</a>
+<a href="#coming-soon" class="js-coming-soon" style="margin-top: 12px; background: #111111; color: #FFFFFF; text-decoration: none; padding: 15px 36px; font-weight: 700; letter-spacing: 0.12em">申し込む</a>
 </div>
 <div style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; color: #111111; padding: 48px 32px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
 <p style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.16em; color: #555555">2-DAY COURSE</p>
@@ -171,7 +173,7 @@ p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
 <p style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 60px; line-height: 1">¥120,000</p>
 <p style="margin: 0; font-size: 14px; color: #555555">（税込）</p>
 <p style="margin: 0; font-size: 14px; color: #333333; padding-top: 6px; flex-grow: 1"><strong>1日目〜2日目</strong><br>基礎に加えて、<br>マネキンでデザインを形にする練習まで</p>
-<a href="#apply" style="margin-top: 12px; background: #111111; color: #FFFFFF; text-decoration: none; padding: 15px 36px; font-weight: 700; letter-spacing: 0.12em">申し込む</a>
+<a href="#coming-soon" class="js-coming-soon" style="margin-top: 12px; background: #111111; color: #FFFFFF; text-decoration: none; padding: 15px 36px; font-weight: 700; letter-spacing: 0.12em">申し込む</a>
 </div>
 <div style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; color: #111111; padding: 48px 32px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px">
 <p style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.16em; color: #555555">FULL COURSE</p>
@@ -180,7 +182,7 @@ p,h1,h2,h3,li{word-break:auto-phrase;text-wrap:pretty}
 <p style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 60px; line-height: 1">¥160,000</p>
 <p style="margin: 0; font-size: 14px; color: #555555">（税込）</p>
 <p style="margin: 0; font-size: 14px; color: #333333; padding-top: 6px; flex-grow: 1"><strong>1日目〜3日目</strong><br>基礎・マネキン練習に加えて、<br>人のモデルで仕上げまで</p>
-<a href="#apply" style="margin-top: 12px; background: #111111; color: #FFFFFF; text-decoration: none; padding: 15px 36px; font-weight: 700; letter-spacing: 0.12em">申し込む</a>
+<a href="#coming-soon" class="js-coming-soon" style="margin-top: 12px; background: #111111; color: #FFFFFF; text-decoration: none; padding: 15px 36px; font-weight: 700; letter-spacing: 0.12em">申し込む</a>
 </div>
 </div>
 <div style="border-top: 1px solid #555555">
@@ -452,7 +454,7 @@ NYLは常識を覆す技術だなと思いました！
 <p style="margin: 0; font-size: clamp(18px, 2vw, 22px); font-weight: 700">お客様の「なりたい」に、まっすぐ応えられるアイリストへ。</p>
 <p style="margin: 0; color: #CFCFCF; font-size: 14px">1日コース ¥65,000 ／ 2日間コース ¥120,000 ／ 3日間フルコース ¥160,000（すべて税込）／ クレジットカード対応</p>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px">
-<a href="[UTAGEの申し込みページURL]" style="background: #FFFFFF; color: #111111; text-decoration: none; padding: 18px 48px; font-weight: 700; letter-spacing: 0.14em">講習を申し込む</a>
+<a href="#coming-soon" class="js-coming-soon" style="background: #FFFFFF; color: #111111; text-decoration: none; padding: 18px 48px; font-weight: 700; letter-spacing: 0.14em">講習を申し込む</a>
 <a href="https://lin.ee/6iDH9nN" style="border: 1px solid #FFFFFF; color: #FFFFFF; text-decoration: none; padding: 17px 40px; font-weight: 700; letter-spacing: 0.14em">公式LINEで相談する</a>
 </div>
 </div>
@@ -511,5 +513,25 @@ NYLは常識を覆す技術だなと思いました！
 </footer>
 
 </div>
+
+<div id="coming-soon" class="cs-modal" role="dialog" aria-modal="true" aria-labelledby="cs-title">
+<div style="background: #FFFFFF; color: #111111; max-width: 480px; width: 100%; padding: 48px 32px 40px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; position: relative">
+<a href="#close" class="js-cs-close" aria-label="閉じる" style="position: absolute; top: 12px; right: 16px; color: #111111; text-decoration: none; font-size: 28px; line-height: 1">×</a>
+<p style="margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 40px; line-height: 1; letter-spacing: 0.06em">COMING SOON</p>
+<div style="width: 40px; height: 3px; background: #111111"></div>
+<p id="cs-title" style="margin: 0; font-size: 17px; font-weight: 700">講習のお申し込みは<br>2027年1月からスタートします。</p>
+<p style="margin: 0; color: #444444; font-size: 15px">今しばらくお待ちください。</p>
+<p style="margin: 8px 0 0; color: #444444; font-size: 14px">いち早く情報を知りたい方は、<br>公式LINEにご登録ください。</p>
+<a href="https://lin.ee/6iDH9nN" style="background: #111111; color: #FFFFFF; text-decoration: none; padding: 16px 36px; font-weight: 700; letter-spacing: 0.12em">公式LINEに登録する</a>
+</div>
+</div>
+<script>
+(function(){var m=document.getElementById('coming-soon');
+document.querySelectorAll('.js-coming-soon').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();m.classList.add('is-open');});});
+function close(e){if(e)e.preventDefault();m.classList.remove('is-open');if(location.hash==='#coming-soon')history.replaceState(null,'',location.pathname+location.search);}
+document.querySelector('.js-cs-close').addEventListener('click',close);
+m.addEventListener('click',function(e){if(e.target===m)close(e);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});})();
+</script>
 </body>
 </html>
